@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'kleeone-regular';
+  src: url('../assets/KleeOne-Regular.ttf') ;
+}
+
+@font-face {
+  font-family: 'kleeone-semibold';
+  src: url('../assets/KleeOne-SemiBold.ttf') ;
+}
