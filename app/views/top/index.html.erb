@@ -1,5 +1,11 @@
+<head>
 <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+
+</head>
+
+<body>
 <div class = 'hedder'>
   <%= link_to image_tag("humberger.jpg", class:"humberger"), "/" %>
   <div class = 'logo-white-wall'>
@@ -13,24 +19,28 @@
 </div>
 <div class = 'white-wall'>
   <div class = 'body-contents'>
-    <div class = 'title'>
-      <p>Products</p>
+    <div data-aos="fade-up" class = "products-wrap">
+      <div class = 'title'>
+        <p>Products</p>
+      </div>
+      <ul class = 'products-contents'>
+        <li class = 'products-container'><%= link_to image_tag("ladies.jpg", class:"products-image"), "/" %></li>
+        <li class = 'products-container'><%= link_to image_tag("men.jpg", class:"products-image"), "/" %></li>
+        <li class = 'products-container'><%= link_to image_tag("backpack.jpg", class:"products-image"), "/" %></li>
+        <li class = 'products-container-none'><%= link_to image_tag("cap.jpg", class:"products-image-none"), "/" %></li>
+      </ul>
     </div>
-    <ul class = 'products-contents'>
-      <li><%= link_to image_tag("ladies.jpg", class:"products-image"), "/" %></li>
-      <li><%= link_to image_tag("men.jpg", class:"products-image"), "/" %></li>
-      <li><%= link_to image_tag("backpack.jpg", class:"products-image"), "/" %></li>
-      <li><%= link_to image_tag("cap.jpg", class:"products-image-none"), "/" %></li>
-    </ul>
   </div>
 
   <div class = 'body-contents'>
-    <div class = 'events-upper-content'>
+    <div data-aos="fade-up" class = 'events-upper-content'>
       <div class = 'title'>
         <p>Events</p>
       </div>
       <div class = 'events-upper-image-text'>
-        <%= link_to image_tag("woman.jpg", class: "events-upper-image"), "/" %>
+        <div class = "image-upper-container">
+          <%= link_to image_tag("woman.jpg", class: "events-upper-image"), "/" %>
+        </div>
         <div class = 'events-texts'>
           <div class = 'events-text-bold'>
             <p>秋冬ニット新作特集</p>
@@ -42,11 +52,11 @@
         </div>
       </div>
     </div>
-    <div class = 'events-bottom-content'>
+    <div data-aos="fade-up" class = 'events-bottom-content'>
       <div class = 'events-bottom-image-text'>
         <div class = 'events-texts'>
           <div class = 'events-text-bold'>
-            <p>秋色リュックに新作登場</p>
+            <p>新作秋色リュック</p>
           </div>
           <div class = 'events-text-regular'>
             <p>実際の紅葉から</p>
@@ -54,18 +64,22 @@
             <p>他にはない秋色リュック</p>
           </div>
         </div>
-        <%= link_to image_tag("man.jpg", class: "events-bottom-image"), "/" %>
+        <div class = "image-bottom-container">
+          <%= link_to image_tag("man.jpg", class: "events-bottom-image"), "/" %>
+        </div>
       </div>
     </div>
   </div>
 
   <div class = 'body-contents'>
-    <div class = 'producers-content'>
+    <div data-aos="fade-up" class = 'producers-content'>
       <div class = 'title'>
         <p>Producers</p>
       </div>
       <div class = 'producers-image-text'>
-        <%= link_to image_tag("white-shirt.jpg", class: "producers-image"), "/" %>
+        <div class = "producers-image-container">
+          <%= link_to image_tag("white-shirt.jpg", class: "producers-image"), "/" %>
+        </div>
         <div class = 'events-texts'>
           <div class = 'events-text-bold'>
             <p>カプ国の職人たち</p>
@@ -84,10 +98,12 @@
   </div>
 
   <div class = 'body-contents'>
-    <div class = 'title'>
-      <p>Map</p>
+    <div data-aos="fade-up" class = 'map-container'>
+      <div class = 'title'>
+        <p>Map</p>
+      </div>
+      <%= image_tag "map.jpg", class: "map-image" %>
     </div>
-    <%= image_tag "map.jpg", class: "map-image" %>
   </div>
 
   <div class = 'footer'>
@@ -96,3 +112,16 @@
     <p>Any similarity to actual persons or events is unintentional.</p>
   </div>
 </div>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 2000,
+  anchorPlacement: 'top-center',
+  delay: 50,
+  once: true, 
+});
+</script>
+
+</body>
